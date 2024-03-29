@@ -87,7 +87,7 @@ const projects = ref([
         id: 1,
         name: 'Mizuka',
         description: "Bot Discord pour la gestion et fidèlisation d'un serveur d'environ 30 000 membres",
-        img: '/img/projects/mizuka.png',
+        img: (process.env.NODE_ENV === "production" ? 'portfolio' : '') + '/img/projects/mizuka.png',
         github: 'https://github.com/oulahoop/bot',
         link: 'https://google.com'
     },
@@ -95,7 +95,7 @@ const projects = ref([
         id: 2,
         name: 'Vacances API',
         description: 'API REST pour les vacances scolaires en France',
-        img: '/img/projects/vacances-api.png',
+        img: (process.env.NODE_ENV === "production" ? 'portfolio' : '') + '/img/projects/vacances-api.png',
         github: 'https://github.com/oulahoop/Vacances-API',
         link: 'https://google.com'
     },
@@ -103,7 +103,7 @@ const projects = ref([
         id: 3,
         name: 'FTP over HTTP',
         description: 'API REST permettant de gérer un serveur FTP depuis des requêtes HTTP',
-        img: '/img/projects/ftp-over-http.png',
+        img: (process.env.NODE_ENV === "production" ? 'portfolio' : '') + '/img/projects/ftp-over-http.png',
         github: 'https://github.com/oulahoop/FTP-over-HTTP',
         link: 'https://gus-corp.fr/'
     },
@@ -111,7 +111,7 @@ const projects = ref([
         id: 4,
         name: 'Chatting API',
         description: "API REST pour un système de chat discord-like réalisé en Laravel 10",
-        img: '/img/projects/chatting-api.png',
+        img: (process.env.NODE_ENV === "production" ? 'portfolio' : '') + '/img/projects/chatting-api.png',
         github: 'https://github.com/oulahoop/Chatting-API',
         link: 'https://google.com'
     }
