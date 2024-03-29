@@ -2,4 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['nuxt-icon'],
+  app: {
+    baseURL: '/portfolio/',
+  }
 })
