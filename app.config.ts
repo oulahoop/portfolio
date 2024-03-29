@@ -7,4 +7,7 @@ export default defineAppConfig({
             'nuxt': 'logos:nuxt-icon',
         }
     },
+    router: {
+        base: '/portfolio/',
+    },
 })
