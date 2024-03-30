@@ -12,6 +12,16 @@
                     <div class="h-captcha" data-captcha="true"></div>
                     <button class="button">Envoyer</button>
                 </form>
+
+                <div v-if="success === true" class="success">
+                    <p>Message envoyé avec succès</p>
+                    <Icon @click="resetSuccessMessage" name="ic:round-close" color="white" />
+                </div>
+
+                <div v-if="success === false" class="error">
+                    <p>Erreur lors de l'envoi du message</p>
+                    <Icon @click="resetSuccessMessage" name="ic:round-close" color="white" />
+                </div>
             </div>
 
             <div class="contact-content-right">
@@ -83,7 +93,7 @@
     }
 
     .success, .error {
-        padding: 5px 20px;
+        padding: 10px 20px 10px 30px;
         margin-top: 10px;
         border-radius: 5px;
         display: flex;
@@ -91,7 +101,13 @@
         justify-content: space-between;
     }
 
+    .success p, .error p {
+        margin: 0;
+    }
+
     .success svg, .error svg {
+        width: 20px;
+        height: 20px;
         cursor: pointer;
     }
 
@@ -129,6 +145,8 @@ const form = ref({
     access_key: '1e19a485-1003-49f6-88fb-9b51a370eb33'
 });
 
+const success = ref<undefined | boolean>(undefined);
+
 const sendForm = async () => {
     const captcha = document.querySelector('.h-captcha').querySelector('iframe')?.dataset?.hcaptchaResponse ?? null;
 
@@ -157,9 +175,10 @@ const sendForm = async () => {
         form.value.email = '';
         form.value.message = '';
         form.value.access_key = '';
-        alert('Message envoyé avec succès');
+
+        success.value = true;
     } else {
-        alert('Erreur lors de l\'envoi du message');
+        success.value = false;
     }
 }
 
@@ -181,6 +200,10 @@ const redirectToLink = (link: string) => {
             window.open('mailto:maelcaubere@hotmail.fr', '_blank');
             break;
     }
+}
+
+const resetSuccessMessage = () => {
+    success.value = undefined;
 }
 
 </script>
