@@ -6,6 +6,8 @@
   <Experiences></Experiences>
 
   <Projects></Projects>
+
+  <Contact></Contact>
 </template>
 
 <style lang="scss">
@@ -24,5 +26,7 @@
   }
 </style>
 
-<script>
+<script setup>
+
+
 </script>

@@ -9,7 +9,7 @@
                 <li><a href="#about">À Propos</a></li>
                 <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#projects">Projets</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>  
     </nav>
@@ -21,7 +21,6 @@
             <Typed :options="options">
                 <h2>Développeur <span class="typing"></span></h2> 
             </Typed>
-
         </div>
         
         <div class="entry-header-image">

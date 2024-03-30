@@ -9,7 +9,7 @@
                     <p>{{ project.description }}</p>
                     <div class="project-links">
                         <a :href="project.github" target="_blank">Github</a>
-                        <a :href="project.link" target="_blank">Voir le projet</a>
+                        <a v-if="project.link" :href="project.link" target="_blank">Voir le projet</a>
                     </div>
                 </div>
             </div>
@@ -72,10 +72,14 @@
 
     .project-links a {
         padding: 10px 20px;
-        background-color: #01ccff;
-        color: white;
+        background-color: #0f99bb;
+        color: rgb(255, 255, 255);
         border-radius: 5px;
         text-decoration: none;
+    }
+
+    .project-links a:hover {
+        background-color: #0c7f9e;
     }
 </style>
 
@@ -90,7 +94,7 @@ const projects = ref([
         description: "Bot Discord pour la gestion et fidèlisation d'un serveur d'environ 30 000 membres",
         img: '/portfolio/img/projects/mizuka.png',
         github: 'https://github.com/oulahoop/bot',
-        link: 'https://google.com'
+        link: 'https://discord.gg/friends'
     },
     {
         id: 2,
@@ -98,7 +102,6 @@ const projects = ref([
         description: 'API REST pour les vacances scolaires en France',
         img: '/portfolio/img/projects/vacances-api.png',
         github: 'https://github.com/oulahoop/Vacances-API',
-        link: 'https://google.com'
     },
     {
         id: 3,
@@ -106,7 +109,6 @@ const projects = ref([
         description: 'API REST permettant de gérer un serveur FTP depuis des requêtes HTTP',
         img: '/portfolio/img/projects/ftp-over-http.png',
         github: 'https://github.com/oulahoop/FTP-over-HTTP',
-        link: 'https://gus-corp.fr/'
     },
     {
         id: 4,
@@ -114,7 +116,6 @@ const projects = ref([
         description: "API REST pour un système de chat discord-like réalisé en Laravel 10",
         img: '/portfolio/img/projects/chatting-api.png',
         github: 'https://github.com/oulahoop/Chatting-API',
-        link: 'https://google.com'
     }
 ]);
 </script>
