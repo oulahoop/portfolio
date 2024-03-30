@@ -8,8 +8,8 @@
                     <h1>{{ project.name }}</h1>
                     <p>{{ project.description }}</p>
                     <div class="project-links">
-                        <a :href="project.github" target="_blank">Github</a>
-                        <a v-if="project.link" :href="project.link" target="_blank">Voir le projet</a>
+                        <a class="button" :href="project.github" target="_blank">Github</a>
+                        <a class="button" v-if="project.link" :href="project.link" target="_blank">Voir le projet</a>
                     </div>
                 </div>
             </div>
@@ -70,17 +70,6 @@
         gap: 20px;
     }
 
-    .project-links a {
-        padding: 10px 20px;
-        background-color: #0f99bb;
-        color: rgb(255, 255, 255);
-        border-radius: 5px;
-        text-decoration: none;
-    }
-
-    .project-links a:hover {
-        background-color: #0c7f9e;
-    }
 </style>
 
 <script setup>

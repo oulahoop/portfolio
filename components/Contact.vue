@@ -10,7 +10,7 @@
                     <input type="email" placeholder="Email" required v-model="form.email">
                     <textarea placeholder="Message" rows="5" required v-model="form.message"></textarea>
                     <div class="h-captcha" data-captcha="true"></div>
-                    <button>Envoyer</button>
+                    <button class="button">Envoyer</button>
                 </form>
             </div>
 
@@ -68,18 +68,8 @@
         color: black;
     }
 
-    button {
+    .button {
         width: 50%;
-        padding: 10px 20px;
-        background-color: #01ccff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #00a6ce;
     }
 
     .icon {
