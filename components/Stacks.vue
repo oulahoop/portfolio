@@ -2,30 +2,21 @@
     <div class="stack-container">
         <h1>Front-End</h1>
         <div class="stacks">
-            <div class="stack" v-for="stack in stacksFront" :key="stack">
-                <Icon :name="stack.icon" color="white" />
-                <p>{{ stack.name }}</p>
-            </div>
+            <Stack v-for="stack in stacksFront" :key="stack" :stack="stack" />
         </div>
     </div>
 
     <div class="stack-container">
         <h1>Back-End</h1>
         <div class="stacks">
-            <div class="stack" v-for="stack in stacksBack" :key="stack">
-                <Icon :name="stack.icon" color="white" />
-                <p>{{ stack.name }}</p>
-            </div>
+            <Stack v-for="stack in stacksBack" :key="stack" :stack="stack" />
         </div>
     </div>
 
     <div class="stack-container">
         <h1>Autres</h1>
         <div class="stacks">
-            <div class="stack" v-for="stack in stacksOther" :key="stack">
-                <Icon :name="stack.icon" color="white" />
-                <p>{{ stack.name }}</p>
-            </div>
+            <Stack v-for="stack in stacksOther" :key="stack" :stack="stack" />
         </div>
     </div>
 </template>
@@ -51,31 +42,6 @@ h1 {
     flex-wrap: wrap;
     gap: 20px;
 }
-
-.stack {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #050505;
-    border-radius: 10px;
-}
-
-.stack:hover {
-    background-color: #020202;
-    transition: background-color 0.3s;
-    margin-top: -10px;
-}
-
-.stack p {
-    font-size: 1.2rem;
-    color: #00a6ce;
-    text-align: center;
-    margin-top: 10px;
-}
-
 
 </style>
 

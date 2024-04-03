@@ -12,10 +12,7 @@
                 <p>{{ experience.description }}</p>
 
                 <div class="stacks">
-                    <div class="stack" v-for="stack in experience.stacks" :key="stack">
-                        <Icon :name="stack.icon" color="white" />
-                        <p>{{ stack.name }}</p>
-                    </div>
+                    <Stack v-for="stack in experience.stacks" :key="stack" :stack="stack" />
                 </div>
             </div>
         </div>
