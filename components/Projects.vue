@@ -45,6 +45,9 @@
 
     .project img {
         width: 100%;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
         border-radius: 10px;
     }
 
@@ -87,10 +90,11 @@ const projects = ref([
     },
     {
         id: 2,
-        name: 'Vacances API',
-        description: 'API REST pour les vacances scolaires en France',
-        img: '/portfolio/img/projects/vacances-api.png',
-        github: 'https://github.com/oulahoop/Vacances-API',
+        name: 'ACrous The Time',
+        description: "Application d'affichage pour les emplois du temps des étudiants, professeurs et salles de l'IUT de Nantes",
+        img: '/portfolio/img/projects/acrousthetime.png',
+        github: 'https://github.com/gugustinette/acrousthetime',
+        link: 'https://acrousthetime.gugustinette.com/'
     },
     {
         id: 3,

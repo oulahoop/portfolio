@@ -24,7 +24,7 @@
         </div>
         
         <div class="entry-header-image">
-            <img src="/img/tortue.png">
+            <img src="/img/photo.png">
         </div>
     </div>
 
@@ -95,6 +95,8 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+        width: 400px;
+        text-wrap: nowrap;
     }
 
     .entry-header h1 {
@@ -125,8 +127,8 @@
     }
 
     .entry-header-image img {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 
     .scroll-down {
