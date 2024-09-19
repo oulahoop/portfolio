@@ -1,3 +1,3 @@
 # Portfolio
 
-Projet réalisé à l'aide de Angular, surtout afin d'améliorer mes compétences dessus !
+Projet réalisé à l'aide de Vue, surtout afin d'apprendre et améliorer mes compétences sur cette technologie !
